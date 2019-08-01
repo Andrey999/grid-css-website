@@ -36,10 +36,76 @@ ul, li {
   background: $dark;
   color: $light;
   padding: 9px 20px; 
-}ttext-decoration: none;xt-decoration: none;t-decoration: none;-decoration: none;
+  text-decoration: none;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.main__nav {
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+  
+    a {
+      background: $primary;
+      display: block;
+      padding: 8px;
+      text-align: center;
+      color: $dark;
+      text-transform: uppercase;
+      font-size: 18px;
+      box-shadow: $shadow;
+      transition: all .3s ease; 
+
+      &:hover {
+        background: $dark;
+        color: $light;
+      }
+    }
 
 
+  }
 
+}
+
+//  Top container
+.top__container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+    'showcase showcase top__box-a'
+    'showcase showcase top__box-b';
+    grid-template-rows: repeat(2, auto);
+}
+
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background: url(https://image.ibb.co/kYJK8x/showcase.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 48px;
+}
+
+.top__box-a {
+  grid-area: top__box-a;
+}
+
+.top__box-b {
+  grid-area: top__box-b;
+}
 
 
 @import "./media.scss";
