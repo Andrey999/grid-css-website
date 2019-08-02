@@ -38,6 +38,11 @@ ul, li {
   padding: 9px 20px; 
   text-decoration: none;
   border: 0;
+
+  &:hover {
+    background: rgb(150, 150, 150);
+    color: $dark;
+  }
 }
 
 img {
@@ -97,6 +102,42 @@ img {
   background-size: cover;
   background-position: center;
   padding: 48px;
+  box-shadow: $shadow;
+
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    color: $light;
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 0;
+    color: $light;
+  }
+
+  a {
+    margin-top: 25px;
+  }
+}
+
+//  Top  box
+.top__box {
+  background: $primary;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 24px;
+  box-shadow: $shadow;
+
+  .price {
+    font-size: 38px;
+  }
 }
 
 .top__box-a {
@@ -107,5 +148,64 @@ img {
   grid-area: top__box-b;
 }
 
+// Boxes
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+  background: $primary;
+  text-align: center;
+  padding: 25px 32px;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+
+// Info
+.info {
+  background: $primary;
+  box-shadow: $shadow;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 48px;
+
+  p {
+    margin-top: 20px;
+  }
+
+  a {
+    margin-top: 15px;
+  }
+}
+
+// Portfolio
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+
+  img {
+    width: 100%;
+    box-shadow: $shadow;
+  }
+}
+
+// Footer
+footer {
+  margin-top: 32px;
+  background: $dark;
+  text-align: center;
+  padding: 16px;
+  color: $light;
+}
 
 @import "./media.scss";
